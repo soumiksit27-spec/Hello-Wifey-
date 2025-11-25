@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Sayari ❤️</title>
+  <style>
+    :root{--accent:#ff5e78;--bg1:#fff0f2;--card:#ffffffcc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(135deg,#ffd6e0 0%, #ffe9f2 50%, #fff 100%);color:#111}
+    header{padding:48px 20px 20px;text-align:center}
+    .title{font-size:2.4rem;margin:0 0 6px;color:var(--accent);letter-spacing:0.3px}
+    .subtitle{margin:0;color:#333;opacity:0.9}
+
+    /* gallery */
+    .gallery{max-width:1100px;margin:34px auto 10px;display:grid;gap:14px;padding:0 18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px;box-shadow:0 8px 30px rgba(30,30,50,0.12);border:6px solid rgba(255,255,255,0.5)}
+
+    /* card */
+    .card-wrap{display:flex;justify-content:center;padding:30px 18px 80px}
+    .card{max-width:900px;width:100%;background:var(--card);backdrop-filter:blur(6px);border-radius:18px;box-shadow:0 20px 50px rgba(16,16,40,0.12);padding:26px}
+    .card h2{margin:0 0 10px;font-size:1.8rem;color:var(--accent)}
+    .message{white-space:pre-line;line-height:1.55;color:#111;font-size:1.05rem}
+
+    /* hearts animation */
+    .hearts{position:fixed;left:0;top:0;right:0;bottom:0;pointer-events:none;overflow:hidden}
+    .heart{position:absolute;width:22px;height:22px;border-radius:8px;background:var(--accent);transform:translateY(0) rotate(0);opacity:0.95}
+
+    /* button */
+    .btn-row{text-align:center;margin-top:18px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 8px 24px rgba(255,94,120,0.28);border:none;cursor:pointer}
+
+    footer{text-align:center;padding:24px;color:#444;opacity:0.9}
+
+    @media (max-width:520px){.title{font-size:1.8rem}.card{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+  <header>
+    <h1 class="title">Happy Birthday, Sayori! 🎉</h1>
+    <p class="subtitle">A small surprise made with love from your bor — open, smile, and enjoy ❤️</p>
+  </header>
+
+  <main>
+    <section class="gallery" aria-label="Photo gallery">
+      <img alt="Sayari and you 1" src="Photos/2f3e2983-b820-4461-8146-a8cc80eb2a52.JPG">
+      <img alt="Sayari and you 2" src="Photos/IMG_4885.JPG">
+      <img alt="Sayari and you 3" src="Photos/IMG_4888.JPG">
+      <img alt="Sayari and you 4" src="Photos/IMG_4988.JPG">
+    </section>
+
+    <div class="card-wrap">
+      <article class="card">
+        <h2>Hey! It’s ur bday!!! Many many happy returns of the day, Paglu❤️</h2>
+        <div class="message">Hey!
+It’s ur bday!!!
+Many many happy returns of the day, Paglu❤️
+
+I know ki beshidin hoyni amader relationship e ese and tao ami anniversary mone rakhte parina…but dekh tor bday thik mone roye geche…
+(Well tor bday amar shuru thekei mone chhilo…jokhon tor sathe amar kotha shuru o hoyni tokhon thekei…) yes ami group er wish theke apnar bday mone rekhechhilam. Sorry, karon ami last year wish korini eta bhebei je tui onno karor girlfriend and kono junior ke text kora thik hobena tao jokhon tar sathe sudhu kaajer jonno kotha hochhe…
+
+Anyways ei bochhor ami khub beshi excited chhilam ei din tar jonno. Don’t ask me why. Last year wish korini tai ei yr korar ichhe chhilo khubbbbb. 
+Happy birthday goru🥸 (Sayori, Nepali or whatever it may be)
+
+Can u imagine amar sob kota bou er ajkei jonmodin🥸???!!! 
+Proud bor moment! Ahaaaa perfect chhinar ami. Next generation amake idol baniye amar theke inspiration niye chhinrai korte pare😎
+
+Jaani aajke khusi thaka uchit amar kintu kharap toh lagche tao karon tui saamne nei aar naa hi ami jete parchi ekhon…bondhu tumi college fero! Esob kichu koster hisab interest soho nebo…
+
+Tobe ykw! Amra eksathe nei eta ekdik theke apnar jonnoi bhalo🥸🥸🥸noile dhore pharma porate lege jetam 12 ta bajlei
+Koi na next yr or next to next yr or jokhon amra eksathe thakbo tokhon na hoy eisob shoitaani gulo apply korbo🥸🥸🥸🤡🙏🏻
+
+Bondhu tumi amar jonno joto efforts diye esecho eto kaal tar kichui ami tomake back dite parina…kintu I will try my best jaate erpor theke tomar jonno sob kichu korte pari
+
+I love you so much, bou🫠 Tomake chhara ei baal er college e survive korte partam na last ek bochhor.Thank you ma’am for choosing this gadha.
+
+With love,
+Baal lok</div>
+        <div class="btn-row">
+          <button class="btn" id="surpriseBtn">Show Surprise ✨</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>Made with ❤️ by a Banchod </footer>
+
+  <script>
+    // Floating hearts generator
+    const heartsWrap = document.getElementById('hearts');
+    function makeHeart(){
+      const h = document.createElement('div');
+      h.className='heart';
+      const size = 14 + Math.random()*28;
+      h.style.width = size + 'px';
+      h.style.height = size + 'px';
+      h.style.left = Math.random()*100 + '%';
+      h.style.top = Math.random()*40 + '%';
+      h.style.opacity = 0.9 - Math.random()*0.5;
+      heartsWrap.appendChild(h);
+      const dx = (Math.random()*40 - 20);
+      h.animate([
+        { transform: `translateY(0) translateX(0) rotate(0)`, opacity: h.style.opacity },
+        { transform: `translateY(-320px) translateX(${dx}px) rotate(20deg)`, opacity: 0 }
+      ], { duration: 2800 + Math.random()*2400, easing: 'cubic-bezier(.2,.9,.2,1)'}).onfinish = ()=> h.remove();
+    }
+    // create a few hearts initially
+    for(let i=0;i<8;i++) setTimeout(makeHeart, i*220);
+    // keep a soft stream
+    setInterval(makeHeart, 700);
+
+    // Surprise button: quick confetti + zoom/pulse effect on card
+    const btn = document.getElementById('surpriseBtn');
+    const card = document.querySelector('.card');
+    btn.addEventListener('click', ()=>{
+      // simple confetti using many small hearts for 1.2s
+      for(let i=0;i<35;i++) setTimeout(makeHeart, i*20);
+      card.animate([
+        { transform: 'scale(1)', boxShadow: '0 20px 50px rgba(16,16,40,0.12)' },
+        { transform: 'scale(1.03)', boxShadow: '0 30px 70px rgba(16,16,40,0.18)' },
+        { transform: 'scale(1)', boxShadow: '0 20px 50px rgba(16,16,40,0.12)' }
+      ], { duration: 700, easing: 'ease-out' });
+      // small flash on title
+      const t = document.querySelector('.title');
+      t.animate([{opacity:1},{opacity:0.4},{opacity:1}],{duration:600});
+    });
+  </script>
+</body>
+</html>
